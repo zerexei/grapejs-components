@@ -5,7 +5,7 @@
     <title>GrapesJS Plugin Boilerplate</title>
     <link href="https://unpkg.com/grapesjs/dist/css/grapes.min.css" rel="stylesheet">
     <script src="https://unpkg.com/grapesjs"></script>
-    <script src="dist/grapesjs-plugin-boilerplate.min.js"></script>
+    <script src="dist/@zerexei/grapejs-components.min.js"></script>
     <style>
       body,
       html {
@@ -17,12 +17,7 @@
   <body>
 
     <div id="gjs" style="height:0px; overflow:hidden">
-      <div style="margin:100px 100px 25px; padding:25px; font:caption">
-        This is a demo content from index.html. For the development, you shouldn't edit this file, instead you can
-        copy and rename it to _index.html, on next server start the new file will be served, and it will be ignored by git.
-      </div>
     </div>
-
 
     <script type="text/javascript">
       var editor = grapesjs.init({
@@ -32,11 +27,7 @@
         storageManager: { autoload: 0 },
         container: '#gjs',
         fromElement: true,
-
-        plugins: ['grapesjs-plugin-boilerplate'],
-        pluginsOpts: {
-          'grapesjs-plugin-boilerplate': { some: 'value' }
-        }
+        plugins: ['zerexei-components'],
       });
       window.editor = editor;
     </script>
