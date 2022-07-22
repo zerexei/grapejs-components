@@ -2,6 +2,7 @@ import Paragraph, { ParagraphBlock } from './components/Paragraph';
 import Col_1, { Col_1_Block } from './components/Col_1';
 import Col_2, { Col_2_Block } from './components/Col_2';
 import Col_3, { Col_3_Block } from './components/Col_3';
+import Heading, { HeadingBlock } from './components/Heading';
 // import Tabs, { TabsBlock } from './components/Tabs';
 
 export default (editor, config = {}) => {
@@ -25,6 +26,8 @@ export default (editor, config = {}) => {
   Col_3_Block(bm);
   Col_3(domc);
 
+  HeadingBlock(bm);
+  Heading(domc);
   // TabsBlock(bm);
   // Tabs(editor);
 };
