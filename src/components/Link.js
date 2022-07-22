@@ -6,7 +6,7 @@ export const LinkBlock = (bm) => {
     label: `
             <div>${name}</div>
         `,
-    category: 'Blocks',
+    category: 'Basic',
     content: `
       <a href="#" target="false">Link</a>
     `,

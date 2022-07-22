@@ -6,7 +6,7 @@ export const VideoBlock = (bm) => {
     label: `
             <div>${name}</div>
         `,
-    category: 'Blocks',
+    category: 'Basic',
     content: {
       type: name,
         src: '#',

@@ -1,22 +1,21 @@
-const name = 'Image';
-const target = (el) => (el?.tagName === 'IMG' ? { type: name } : false);
+const name = 'HR';
+const target = (el) => (el?.classList?.contains('hr') ? { type: name } : false);
 
-export const ImageBlock = (bm) => {
+export const HrBlock = (bm) => {
   bm.add(name, {
     label: `
             <div>${name}</div>
         `,
-    category: 'Basic',
+    category: 'Blocks',
     content: {
       type: name,
-      style: { color: 'black' },
-      activeOnRender: 1,
+      content: `<div class="hr" style="display:block;margin: 2rem 0;border-bottom:2px solid #000"></div>`
     },
   });
 };
 
 export default (domc) => {
-  const defaultType = domc.getType('image');
+  const defaultType = domc.getType('default');
   const defaultModel = defaultType.model;
   const defaultView = defaultType.view;
 
@@ -26,6 +25,7 @@ export default (domc) => {
       defaults: { ...defaultModel.prototype.defaults },
       'custom-name': name,
       traits: ['foo'].concat(defaultModel.prototype.defaults.traits),
+      droppable: false,
     }),
     view: defaultView,
   });
