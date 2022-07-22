@@ -1,5 +1,5 @@
 const name = 'Link';
-const target = (el) => (el?.tagName === 'A' ? { type: name } : false);
+const target = (el) => el?.tagName === 'A';
 
 export const LinkBlock = (bm) => {
   bm.add(name, {
@@ -7,9 +7,12 @@ export const LinkBlock = (bm) => {
             <div>${name}</div>
         `,
     category: 'Basic',
-    content: `
+    content: {
+      type: 'link',
+      content: `
       <a href="#" target="false">Link</a>
-    `,
+      `,
+    }
   });
 };
 
@@ -22,6 +25,7 @@ export default (domc) => {
     model: {
       defaults: {
         'custom-name': 'Link',
+        name,
         traits: [
             'href',
             {
