@@ -1,5 +1,5 @@
 const name = 'Button';
-const target = (el) => el?.tagName === 'BUTTON';
+const target = (el) => el?.tagName === 'BUTTON' ? {type: name} : false;;
 
 export const ButtonBlock = (bm) => {
   bm.add(name, {

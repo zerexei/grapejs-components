@@ -1,5 +1,5 @@
 const name = 'Div';
-const target = (el) => el?.tagName === 'DIV';
+const target = (el) => el?.tagName === 'DIV'  ? {type: name} : false;;
 
 export const DivBlock = (bm) => {
   bm.add(name, {

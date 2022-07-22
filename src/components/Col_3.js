@@ -1,5 +1,5 @@
 const name = 'Col 3';
-const target = (el) => el?.classList?.contains('z-col-3');
+const target = (el) => el?.classList?.contains('z-col-3') ? {type: name} : false;;
 
 export const Col_3_Block = (bm) => {
   bm.add(name, {

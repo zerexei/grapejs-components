@@ -1,5 +1,5 @@
 const name = 'Heading';
-const target = (el) => el?.tagName === 'h2';
+const target = (el) => el?.tagName === 'h2'  ? {type: name} : false;;
 
 export const HeadingBlock = (bm) => {
   bm.add(name, {

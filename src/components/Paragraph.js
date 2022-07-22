@@ -15,7 +15,7 @@ export default (domc) => {
   const textModel = textType.model;
 
   domc.addType('paragraph', {
-    isComponent: el => el?.tagName === 'P',
+    isComponent: el => el?.tagName === 'P'  ? {type: 'paragraph'} : false,
     extend: 'text',
     model: {
       defaults: {
