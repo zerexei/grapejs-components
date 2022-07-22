@@ -7,6 +7,7 @@ import Button, { ButtonBlock } from './components/Button';
 import Div, { DivBlock } from './components/Div';
 import Link, { LinkBlock } from './components/Link';
 import Image, { ImageBlock } from './components/Image';
+import Video, { VideoBlock } from './components/Video';
 // import Tabs, { TabsBlock } from './components/Tabs';
 
 // @see https://github.com/artf/grapesjs/issues/263
@@ -47,6 +48,9 @@ export default (editor, config = {}) => {
 
   ImageBlock(bm);
   Image(domc);
+
+  VideoBlock(bm);
+  Video(domc);
   // TabsBlock(bm);
   // Tabs(editor);
 };
