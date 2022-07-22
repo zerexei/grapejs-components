@@ -9,6 +9,7 @@ import Hr, { HrBlock } from './components/Hr';
 import Link, { LinkBlock } from './components/Link';
 import Image, { ImageBlock } from './components/Image';
 import Video, { VideoBlock } from './components/Video';
+import Flexbox, {FlexboxBlock} from './components/Flexbox';
 // import Tabs, { TabsBlock } from './components/Tabs';
 
 // @see https://github.com/artf/grapesjs/issues/263
@@ -44,6 +45,9 @@ export default (editor, config = {}) => {
   
   DivBlock(bm);
   Div(domc);
+
+  FlexboxBlock(bm);
+  // Flexbox(domc);
 
   // typography
   ParagraphBlock(bm);
