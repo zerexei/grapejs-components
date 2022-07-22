@@ -6,6 +6,7 @@ import Col_3, { Col_3_Block } from './components/Col_3';
 import Button, { ButtonBlock } from './components/Button';
 import Div, { DivBlock } from './components/Div';
 import Link, { LinkBlock } from './components/Link';
+import Image, { ImageBlock } from './components/Image';
 // import Tabs, { TabsBlock } from './components/Tabs';
 
 // @see https://github.com/artf/grapesjs/issues/263
@@ -43,6 +44,9 @@ export default (editor, config = {}) => {
 
   LinkBlock(bm);
   Link(domc);
+
+  ImageBlock(bm);
+  Image(domc);
   // TabsBlock(bm);
   // Tabs(editor);
 };
