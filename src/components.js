@@ -2,7 +2,7 @@ import Paragraph, { ParagraphBlock } from './components/Paragraph';
 import Col_1, { Col_1_Block } from './components/Col_1';
 import Col_2, { Col_2_Block } from './components/Col_2';
 import Col_3, { Col_3_Block } from './components/Col_3';
-import Tabs, { TabsBlock } from './components/Tabs';
+// import Tabs, { TabsBlock } from './components/Tabs';
 
 export default (editor, config = {}) => {
   const domc = editor.DomComponents;

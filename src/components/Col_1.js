@@ -8,7 +8,7 @@ export const Col_1_Block = (bm) => {
         `,
     category: 'contianers',
     content: `
-      <div class="z-col-1" style="padding: 2rem">
+      <div class="z-col-1 style="padding: 2rem">
         <div style="padding: 2rem"></div>
       </div>
     `,
