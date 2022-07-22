@@ -6,9 +6,9 @@ export const Col_3_Block = (bm) => {
     label: `
             <div>${name}</div>
         `,
-    category: 'contianers',
+    category: 'Contianers',
     content: `
-      <div class="z-col-2" style="display: grid; grid-template-columns: 1fr 1fr 1fr;padding: 2rem">
+      <div class="z-col-2 md:grid md:grid-cols-3" style="padding: 2rem">
         <div style="padding: 2rem"></div>
         <div style="padding: 2rem"></div>
         <div style="padding: 2rem"></div>
