@@ -25,6 +25,7 @@ export default (domc) => {
     extend: name,
     model: {
       defaults: {
+        resizable: true,
         name: name,
       },
     },

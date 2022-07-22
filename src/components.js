@@ -4,7 +4,10 @@ import Col_1, { Col_1_Block } from './components/Col_1';
 import Col_2, { Col_2_Block } from './components/Col_2';
 import Col_3, { Col_3_Block } from './components/Col_3';
 import Button, { ButtonBlock } from './components/Button';
+import Div, { DivBlock } from './components/Div';
 // import Tabs, { TabsBlock } from './components/Tabs';
+
+// @see https://github.com/artf/grapesjs/issues/263
 
 export default (editor, config = {}) => {
   const domc = editor.DomComponents;
@@ -33,6 +36,9 @@ export default (editor, config = {}) => {
 
   ButtonBlock(bm);
   Button(domc);
+
+  DivBlock(bm);
+  Div(domc);
   // TabsBlock(bm);
   // Tabs(editor);
 };
