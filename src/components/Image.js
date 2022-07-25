@@ -9,7 +9,7 @@ export const ImageBlock = (bm) => {
     category: 'Basic',
     content: {
       type: name,
-      style: { color: 'black' },
+      style: { color: 'black', width: '100%', height: '100%' },
       activeOnRender: 1,
     },
   });

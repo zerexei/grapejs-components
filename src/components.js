@@ -10,6 +10,7 @@ import Link, { LinkBlock } from './components/Link';
 import Image, { ImageBlock } from './components/Image';
 import Video, { VideoBlock } from './components/Video';
 import Flexbox, {FlexboxBlock} from './components/Flexbox';
+import { HeroBlock } from './components/Hero';
 // import Tabs, { TabsBlock } from './components/Tabs';
 
 // @see https://github.com/artf/grapesjs/issues/263
@@ -25,7 +26,7 @@ export default (editor, config = {}) => {
 
   // basic
   LinkBlock(bm);
-  Link(domc);
+  // Link(domc);
 
   ImageBlock(bm);
   Image(domc);
@@ -56,6 +57,9 @@ export default (editor, config = {}) => {
   HeadingBlock(bm);
   Heading(domc);
   
+  // templates
+  HeroBlock(bm);
+
   // blocks
   ButtonBlock(bm);
   Button(domc);
