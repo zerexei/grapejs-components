@@ -1,16 +1,17 @@
-import Paragraph, { ParagraphBlock } from './components/Paragraph';
-import Heading, { HeadingBlock } from './components/Heading';
-import Col_1, { Col_1_Block } from './components/Col_1';
-import Col_2, { Col_2_Block } from './components/Col_2';
-import Col_3, { Col_3_Block } from './components/Col_3';
-import Button, { ButtonBlock } from './components/Button';
-import Div, { DivBlock } from './components/Div';
-import Hr, { HrBlock } from './components/Hr';
-import Link, { LinkBlock } from './components/Link';
-import Image, { ImageBlock } from './components/Image';
-import Video, { VideoBlock } from './components/Video';
-import Flexbox, {FlexboxBlock} from './components/Flexbox';
-import { HeroBlock } from './components/Hero';
+import Paragraph, { ParagraphBlock } from './Components/Paragraph';
+import Heading, { HeadingBlock } from './Components/Heading';
+import Col_1, { Col_1_Block } from './Components/Col_1';
+import Col_2, { Col_2_Block } from './Components/Col_2';
+import Col_3, { Col_3_Block } from './Components/Col_3';
+import Button, { ButtonBlock } from './Components/Button';
+import Div, { DivBlock } from './Components/Div';
+import Hr, { HrBlock } from './Components/Hr';
+import Link, { LinkBlock } from './Components/Link';
+import Image, { ImageBlock } from './Components/Image';
+import Video, { VideoBlock } from './Components/Video';
+import Flexbox, {FlexboxBlock} from './Components/Flexbox';
+import { HeroBlock } from './Components/Hero';
+import Alpine from './Components/Alpine';
 // import Tabs, { TabsBlock } from './components/Tabs';
 
 // @see https://github.com/artf/grapesjs/issues/263
@@ -59,6 +60,7 @@ export default (editor, config = {}) => {
   
   // templates
   HeroBlock(bm);
+  Alpine(editor);
 
   // blocks
   ButtonBlock(bm);
