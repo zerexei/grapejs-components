@@ -8,7 +8,7 @@ export const Col_1_Block = (bm) => {
         `,
     category: 'Contianers',
     content: `
-      <div class="z-col-1" style="padding: 2rem">
+      <div data-gjs-type="${name}"  class="z-col-1" style="padding: 2rem">
         <div style="padding: 2rem"></div>
       </div>
     `,
@@ -16,11 +16,9 @@ export const Col_1_Block = (bm) => {
 };
 
 export default (domc) => {
-  const textType = domc.getType('wrapper');
-
   domc.addType(name, {
     isComponent: target,
-    extend: name,
+    extend: 'wrapper',
     model: {
       defaults: {
         resizable: true,
