@@ -6,7 +6,7 @@ import { ImageBlock } from './Components/Image';
 import { VideoBlock } from './Components/Video';
 import Button, { ButtonBlock } from './Components/Button';
 
-import Hr, { HrBlock } from './Components/Hr';
+import { HrBlock } from './Components/Hr';
 import { HeroBlock } from './Components/Hero';
 import Alpine from './Components/Alpine';
 
@@ -52,8 +52,7 @@ export default (editor, config = {}) => {
   ButtonBlock(bm);
   Button(domc);
 
-  // HrBlock(bm);
-  // Hr(domc);
+  HrBlock(bm);
 
   // TabsBlock(bm);
   // Tabs(editor);
