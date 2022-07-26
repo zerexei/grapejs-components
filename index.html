@@ -29,12 +29,12 @@
         container: '#gjs',
         fromElement: true,
         plugins: ['zerexei-components'],
+        canvas: {
+          styles: ['https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'],
+          scripts: ['https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', 'https://cdn.tailwindcss.com']
+        }
       });
       window.editor = editor;
-
-      const scriptEl = document.createElement('script');
-      scriptEl.src = 'https://cdn.tailwindcss.com';
-      editor.Canvas.getDocument().head.appendChild(scriptEl);
     </script>
   </body>
 </html>

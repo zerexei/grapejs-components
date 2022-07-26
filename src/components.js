@@ -9,9 +9,10 @@ import Hr, { HrBlock } from './Components/Hr';
 import Link, { LinkBlock } from './Components/Link';
 import Image, { ImageBlock } from './Components/Image';
 import Video, { VideoBlock } from './Components/Video';
-import Flexbox, {FlexboxBlock} from './Components/Flexbox';
+import Flexbox, { FlexboxBlock } from './Components/Flexbox';
 import { HeroBlock } from './Components/Hero';
 import Alpine from './Components/Alpine';
+import Carousel, { CarouselBlock } from './Components/Carousel';
 // import Tabs, { TabsBlock } from './components/Tabs';
 
 // @see https://github.com/artf/grapesjs/issues/263
@@ -25,49 +26,52 @@ export default (editor, config = {}) => {
 
   const bm = editor.BlockManager;
 
-  // basic
-  LinkBlock(bm);
-  // Link(domc);
+  CarouselBlock(bm);
+  Carousel(domc);
 
-  ImageBlock(bm);
-  Image(domc);
+  // // basic
+  // LinkBlock(bm);
+  // // Link(domc);
 
-  VideoBlock(bm);
-  Video(domc);
+  // ImageBlock(bm);
+  // Image(domc);
 
-  // containers
-  Col_1_Block(bm);
-  Col_1(domc);
-  
-  Col_2_Block(bm);
-  Col_2(domc);
-  
-  Col_3_Block(bm);
-  Col_3(domc);
-  
-  DivBlock(bm);
-  Div(domc);
+  // VideoBlock(bm);
+  // Video(domc);
 
-  FlexboxBlock(bm);
-  // Flexbox(domc);
+  // // containers
+  // Col_1_Block(bm);
+  // Col_1(domc);
 
-  // typography
-  ParagraphBlock(bm);
-  Paragraph(domc);
+  // Col_2_Block(bm);
+  // Col_2(domc);
 
-  HeadingBlock(bm);
-  Heading(domc);
-  
-  // templates
-  HeroBlock(bm);
-  Alpine(editor);
+  // Col_3_Block(bm);
+  // Col_3(domc);
 
-  // blocks
-  ButtonBlock(bm);
-  Button(domc);
+  // DivBlock(bm);
+  // Div(domc);
 
-  HrBlock(bm);
-  Hr(domc);
+  // FlexboxBlock(bm);
+  // // Flexbox(domc);
+
+  // // typography
+  // ParagraphBlock(bm);
+  // Paragraph(domc);
+
+  // HeadingBlock(bm);
+  // Heading(domc);
+
+  // // templates
+  // HeroBlock(bm);
+  // Alpine(editor);
+
+  // // blocks
+  // ButtonBlock(bm);
+  // Button(domc);
+
+  // HrBlock(bm);
+  // Hr(domc);
 
   // TabsBlock(bm);
   // Tabs(editor);
