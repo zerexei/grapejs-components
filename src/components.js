@@ -1,8 +1,8 @@
 import { ContainersBlock } from './components/Containers';
-
-import Paragraph, { ParagraphBlock } from './Components/Paragraph';
-import Heading, { HeadingBlock } from './Components/Heading';
+import { ParagraphBlock } from './Components/Paragraph';
+import { HeadingBlock } from './Components/Heading';
 import Button, { ButtonBlock } from './Components/Button';
+
 import Hr, { HrBlock } from './Components/Hr';
 import Link, { LinkBlock } from './Components/Link';
 import Image, { ImageBlock } from './Components/Image';
@@ -50,12 +50,9 @@ export default (editor, config = {}) => {
   // FlexboxBlock(bm);
   // // Flexbox(domc);
 
-  // // typography
-  // ParagraphBlock(bm);
-  // Paragraph(domc);
-
-  // HeadingBlock(bm);
-  // Heading(domc);
+  // * typography
+  ParagraphBlock(bm);
+  HeadingBlock(bm);
 
   // // templates
   // HeroBlock(bm);
