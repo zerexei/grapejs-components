@@ -20,7 +20,7 @@ export const ContainersBlock = (bm) => {
           class="grid md:grid-cols-${container.size}"
           style="padding: 2rem"
         >
-          ${`<div data-gjs-name="${container.name}-wrapper" style="padding: 2rem"></div>`.repeat(container.size)}
+          ${`<div style="padding: 2rem"></div>`.repeat(container.size)}
         </div>
       `,
     });
