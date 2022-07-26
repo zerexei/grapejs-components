@@ -7,6 +7,7 @@ let opt = {
 const styles = `
     <style>
        .swiper {
+        padding: 2rem;
         width: 600px;
         height: 300px;
       }
@@ -48,7 +49,7 @@ export const CarouselBlock = (bm) => {
         `,
     category: opt.category,
     content: `
-        <div class="swiper swiper-container my-swiper" data-progressType="bullets">
+        <div class="swiper swiper-container my-swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">Slide 1</div>
             <div class="swiper-slide">Slide 2</div>
@@ -81,7 +82,14 @@ export default (domc) => {
     model: {
       defaults: {
         traits: [
-            "foo",
+          {
+            type: 'checkbox',
+            // ...
+            label: 'dots',
+            name: 'data-flickity-dots',
+            valueTrue: 'YES', // Value to assign when is checked, default: `true`
+            valueFalse: 'NO', // Value to assign when is unchecked, default: `false`
+          },
           {
             type: 'select',
             name: 'data-progressType',
@@ -99,6 +107,7 @@ export default (domc) => {
 
           const initLib = function () {
             const swiper = new Swiper('.my-swiper', {
+              loop: true,
               spaceBetween: 30,
               centeredSlides: true,
               //   autoplay: {
@@ -108,7 +117,7 @@ export default (domc) => {
               pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
-                type: progressType || "bullets",
+                type: progressType || 'bullets',
               },
               navigation: {
                 nextEl: '.swiper-button-next',
