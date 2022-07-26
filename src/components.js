@@ -31,7 +31,7 @@ export default (editor, config = {}) => {
   FooBlock(bm);
   Foo(domc);
 
-  // // basic
+  // * basic
   // LinkBlock(bm);
   // // Link(domc);
 
@@ -41,7 +41,7 @@ export default (editor, config = {}) => {
   // VideoBlock(bm);
   // Video(domc);
 
-  // containers
+  // * containers
   ContainersBlock(bm);
 
   // DivBlock(bm);
@@ -61,9 +61,9 @@ export default (editor, config = {}) => {
   // HeroBlock(bm);
   // Alpine(editor);
 
-  // // blocks
-  // ButtonBlock(bm);
-  // Button(domc);
+  // * blocks
+  ButtonBlock(bm);
+  Button(domc);
 
   // HrBlock(bm);
   // Hr(domc);
