@@ -13,6 +13,7 @@ import Flexbox, { FlexboxBlock } from './Components/Flexbox';
 import { HeroBlock } from './Components/Hero';
 import Alpine from './Components/Alpine';
 import Carousel, { CarouselBlock } from './Components/Carousel';
+import Foo, { FooBlock } from './components/Foo';
 // import Tabs, { TabsBlock } from './components/Tabs';
 
 // @see https://github.com/artf/grapesjs/issues/263
@@ -28,6 +29,9 @@ export default (editor, config = {}) => {
 
   CarouselBlock(bm);
   Carousel(domc);
+
+  FooBlock(bm);
+  Foo(domc);
 
   // // basic
   // LinkBlock(bm);
