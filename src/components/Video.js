@@ -1,35 +1,16 @@
-const name = 'Video';
-const target = (el) => (el?.tagName === 'VIDEO' ? { type: name } : false);
-
 export const VideoBlock = (bm) => {
-  bm.add(name, {
+  bm.add('video', {
     label: `
-            <div>${name}</div>
+            <div>Video</div>
         `,
     category: 'Basic',
     content: {
-      type: name,
-        src: '#',
-        style: {
-          height: '350px',
-          width: '615px'
-        }
+      type: 'video',
+      src: '#',
+      style: {
+        height: '250px',
+        width: '500px',
+      },
     },
-  });
-};
-
-export default (domc) => {
-  const defaultType = domc.getType('video');
-  const defaultModel = defaultType.model;
-  const defaultView = defaultType.view;
-
-  domc.addType(name, {
-    isComponent: target,
-    model: defaultModel.extend({
-      defaults: { ...defaultModel.prototype.defaults },
-      'custom-name': name,
-      traits: ['foo'].concat(defaultModel.prototype.defaults.traits),
-    }),
-    view: defaultView,
   });
 };

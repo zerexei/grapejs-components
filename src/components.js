@@ -1,12 +1,12 @@
 import { ContainersBlock } from './components/Containers';
 import { ParagraphBlock } from './Components/Paragraph';
 import { HeadingBlock } from './Components/Heading';
+import  { LinkBlock } from './Components/Link';
+import { ImageBlock } from './Components/Image';
+import { VideoBlock } from './Components/Video';
 import Button, { ButtonBlock } from './Components/Button';
 
 import Hr, { HrBlock } from './Components/Hr';
-import  { LinkBlock } from './Components/Link';
-import Image, { ImageBlock } from './Components/Image';
-import Video, { VideoBlock } from './Components/Video';
 import { HeroBlock } from './Components/Hero';
 import Alpine from './Components/Alpine';
 
@@ -33,21 +33,12 @@ export default (editor, config = {}) => {
 
   // * basic
   LinkBlock(bm);
+  ImageBlock(bm);
+  VideoBlock(bm);
 
-  // ImageBlock(bm);
-  // Image(domc);
-
-  // VideoBlock(bm);
-  // Video(domc);
 
   // * containers
   ContainersBlock(bm);
-
-  // DivBlock(bm);
-  // Div(domc);
-
-  // FlexboxBlock(bm);
-  // // Flexbox(domc);
 
   // * typography
   ParagraphBlock(bm);
