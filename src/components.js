@@ -1,17 +1,15 @@
+import { ContainersBlock } from './components/Containers';
+
 import Paragraph, { ParagraphBlock } from './Components/Paragraph';
 import Heading, { HeadingBlock } from './Components/Heading';
-import Col_1, { Col_1_Block } from './Components/Col_1';
-import Col_2, { Col_2_Block } from './Components/Col_2';
-import Col_3, { Col_3_Block } from './Components/Col_3';
 import Button, { ButtonBlock } from './Components/Button';
-import Div, { DivBlock } from './Components/Div';
 import Hr, { HrBlock } from './Components/Hr';
 import Link, { LinkBlock } from './Components/Link';
 import Image, { ImageBlock } from './Components/Image';
 import Video, { VideoBlock } from './Components/Video';
-import Flexbox, { FlexboxBlock } from './Components/Flexbox';
 import { HeroBlock } from './Components/Hero';
 import Alpine from './Components/Alpine';
+
 import Carousel, { CarouselBlock } from './Components/Carousel';
 import Foo, { FooBlock } from './components/Foo';
 // import Tabs, { TabsBlock } from './components/Tabs';
@@ -43,15 +41,8 @@ export default (editor, config = {}) => {
   // VideoBlock(bm);
   // Video(domc);
 
-  // // containers
-  // Col_1_Block(bm);
-  // Col_1(domc);
-
-  // Col_2_Block(bm);
-  // Col_2(domc);
-
-  // Col_3_Block(bm);
-  // Col_3(domc);
+  // containers
+  ContainersBlock(bm);
 
   // DivBlock(bm);
   // Div(domc);

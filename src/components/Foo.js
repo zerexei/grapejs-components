@@ -24,7 +24,7 @@ export const FooBlock = (bm) => {
 export default (domc) => {
   domc.addType(opt.name, {
     model: {
-      defaults: {traits: ['foo']},
+      defaults: { traits: ['foo'] },
       init() {
         const children = this.components();
         children.add(`<p><span>Hello</span><span>World</span></p>`);
@@ -33,11 +33,22 @@ export default (domc) => {
       },
       updated(property, value, previous) {
         if (value.foo) {
-            const child = this.getChildAt(1);
-            child.addClass('class1');
+          const child = this.getChildAt(1);
+          child.addClass('class1');
         }
-      }
+      },
     },
     isComponent: opt.target,
   });
 };
+
+// // content
+// bm.add('foo-block', {
+//   content: {
+//     type: 'text',
+//     tagName: 'p',
+//     classes: ['card-text'],
+//     content:
+//       "Some quick example text to build on the card title and make up the bulk of the card's content.",
+//   },
+// });

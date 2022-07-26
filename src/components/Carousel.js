@@ -49,11 +49,9 @@ export const CarouselBlock = (bm) => {
         `,
     category: opt.category,
     content: `
-        <div class="swiper swiper-container my-swiper">
+        <div id="app" class="swiper swiper-container my-swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
+            <div v-for="x, i in [1,2,3,4,5]" :key="i" class="swiper-slide">Slide {{i}}</div>
           </div>
           <div class="swiper-pagination"></div>
 
@@ -61,6 +59,7 @@ export const CarouselBlock = (bm) => {
           <div class="swiper-button-next"></div>
 
           <div class="swiper-scrollbar"></div>
+          <p v-text="message"></p>
         </div>
         ${styles}
     `,
@@ -105,15 +104,24 @@ export default (domc) => {
         script: function () {
           const progressType = '{[ data-progressType ]}';
 
+          const initVue = function () {
+            // var app = new Vue({
+            //   el: '#app',
+            //   data: {
+            //     message: 'Hello Vue!',
+            //   },
+            // });
+          };
+
           const initLib = function () {
             const swiper = new Swiper('.my-swiper', {
               loop: true,
               spaceBetween: 30,
               centeredSlides: true,
-              //   autoplay: {
-              //     delay: 2500,
-              //     disableOnInteraction: false,
-              //   },
+                autoplay: {
+                  delay: 2500,
+                  disableOnInteraction: false,
+                },
               pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
@@ -126,6 +134,15 @@ export default (domc) => {
             });
             console.log('swiper :>> ', swiper);
           };
+
+          if (typeof Vue == 'undefined') {
+            const script = document.createElement('script');
+            script.onload = initVue;
+            script.src = 'https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js';
+            document.body.appendChild(script);
+          } else {
+            initVue();
+          }
 
           if (typeof Swiper == 'undefined') {
             const script = document.createElement('script');
