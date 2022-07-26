@@ -4,7 +4,7 @@ import { HeadingBlock } from './Components/Heading';
 import Button, { ButtonBlock } from './Components/Button';
 
 import Hr, { HrBlock } from './Components/Hr';
-import Link, { LinkBlock } from './Components/Link';
+import  { LinkBlock } from './Components/Link';
 import Image, { ImageBlock } from './Components/Image';
 import Video, { VideoBlock } from './Components/Video';
 import { HeroBlock } from './Components/Hero';
@@ -32,8 +32,7 @@ export default (editor, config = {}) => {
   Foo(domc);
 
   // * basic
-  // LinkBlock(bm);
-  // // Link(domc);
+  LinkBlock(bm);
 
   // ImageBlock(bm);
   // Image(domc);

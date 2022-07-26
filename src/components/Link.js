@@ -1,43 +1,14 @@
-const name = 'Link';
-// const target = (el) => el?.tagName === 'A';
-
 export const LinkBlock = (bm) => {
-  bm.add(name, {
+  bm.add('link', {
     label: `
-            <div>${name}</div>
+            <div>Link</div>
         `,
     category: 'Basic',
     content: {
       type: 'link',
+      name: 'foo',
       content: 'Link',
       style: { color: '#d983a6' },
     },
   });
 };
-
-// export default (domc) => {
-//   const textType = domc.getType('link');
-
-//   domc.addType(name, {
-//     isComponent: target,
-//     extend: textType,
-//     model: {
-//       defaults: {
-//         'custom-name': 'Link',
-//         name,
-//         traits: [
-//             'href',
-//             {
-//             label: 'Target',
-//             type: 'select',
-//             name: 'target',
-//             options: [
-//               { value: 'false', name: 'This Window' },
-//               { value: '_blank', name: 'New Window' },
-//             ],
-//           },
-//         ]
-//       },
-//     },
-//   });
-// };
