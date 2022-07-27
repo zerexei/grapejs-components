@@ -12,6 +12,7 @@ import Alpine from './Components/Alpine';
 
 import Carousel, { CarouselBlock } from './Components/Carousel';
 import Foo, { FooBlock } from './components/Foo';
+import Posts, { PostsBlock } from './Components/Posts';
 // import Tabs, { TabsBlock } from './components/Tabs';
 
 // @see https://github.com/artf/grapesjs/issues/263
@@ -24,6 +25,9 @@ export default (editor, config = {}) => {
   // ...
 
   const bm = editor.BlockManager;
+
+ PostsBlock(bm);
+ Posts(domc);
 
   CarouselBlock(bm);
   Carousel(domc);
