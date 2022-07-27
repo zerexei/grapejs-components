@@ -46,7 +46,7 @@ export default (editor, config = {}) => {
 
   // // templates
   // HeroBlock(bm);
-  // Alpine(editor);
+  Alpine(editor);
 
   // * blocks
   ButtonBlock(bm);

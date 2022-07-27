@@ -50,15 +50,15 @@ export const CarouselBlock = (bm) => {
     category: opt.category,
     content: `
         <div id="app" class="swiper swiper-container my-swiper">
-          <div class="swiper-wrapper">
-            <div v-for="x, i in [1,2,3,4,5]" :key="i" class="swiper-slide">Slide {{i}}</div>
+          <div data-gjs-locked="true" data-gjs-highlightable="false" class="swiper-wrapper">
+            <div v-for="x, i in [1,2,3,4,5]" :key="i" data-gjs-locked="true" data-gjs-highlightable="false" class="swiper-slide">Slide {{i}}</div>
           </div>
-          <div class="swiper-pagination"></div>
+          <div data-gjs-locked="true" data-gjs-highlightable="false" class="swiper-pagination"></div>
 
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <div data-gjs-locked="true" data-gjs-highlightable="false" class="swiper-button-prev"></div>
+          <div data-gjs-locked="true" data-gjs-highlightable="false" class="swiper-button-next"></div>
 
-          <div class="swiper-scrollbar"></div>
+          <div data-gjs-locked="true" data-gjs-highlightable="false" class="swiper-scrollbar"></div>
           <p v-text="message"></p>
         </div>
         ${styles}
