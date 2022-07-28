@@ -17,7 +17,7 @@ export const PostsBlock = (bm) => {
     category: opt.category,
     content: `
         <div data-gjs-type="${opt.name}" class="${opt.name}">
-    <div class="posts__wrapper gap-2 p-4" data-posts-limit="5"
+    <div data-gjs-locked="true" class="posts__wrapper gap-2 p-4" data-posts-limit="5"
         data-posts="vue-posts">
         <div v-for="post in posts" v-bind:key="post.id" class="post__card p-4"
             :id="\`post-card-\${post.id}\`">
@@ -69,6 +69,33 @@ export default (domc) => {
               { value: '2', name: 'Type 2' },
               { value: '3', name: 'Type 3' },
             ],
+          },
+          {
+            type: 'number',
+            // ...
+            name: 'posts-limit',
+            label: 'Limit',
+            placeholder: '0-100',
+            min: 0, // Minimum number value
+            max: 100, // Maximum number value
+            step: 5, // Number of steps
+          },
+          {
+            type: 'select',
+            name: 'posts-orderBy',
+            label: 'Order By',
+            options: [
+              { value: 'title', name: 'Title' },
+              { value: 'author', name: 'Author' },
+              { value: 'created_at', name: 'Created At' },
+            ],
+          },
+          {
+            type: 'button',
+            // ...
+            text: 'Click me',
+            full: true, // Full width button
+            command: (editor) => alert('Hello'),
           },
         ],
       },
