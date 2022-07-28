@@ -7,11 +7,11 @@ import { VideoBlock } from './Components/Video';
 import Button, { ButtonBlock } from './Components/Button';
 
 import { HrBlock } from './Components/Hr';
-import { HeroBlock } from './Components/Hero';
-import Alpine from './Components/Alpine';
+// import { HeroBlock } from './Components/Hero';
+// import Alpine from './Components/Alpine';
+// import Foo, { FooBlock } from './components/Foo';
 
 import Carousel, { CarouselBlock } from './Components/Carousel';
-import Foo, { FooBlock } from './components/Foo';
 import Posts, { PostsBlock } from './Components/Posts';
 // import Tabs, { TabsBlock } from './components/Tabs';
 
@@ -51,8 +51,8 @@ export default (editor, config = {}) => {
   CarouselBlock(bm);
   Carousel(domc);
 
-  FooBlock(bm);
-  Foo(domc);
+  // FooBlock(bm);
+  // Foo(domc);
 
   // * basic
   LinkBlock(bm);
@@ -68,7 +68,7 @@ export default (editor, config = {}) => {
 
   // // templates
   // HeroBlock(bm);
-  Alpine(editor);
+  // Alpine(editor);
 
   // * blocks
   ButtonBlock(bm);
