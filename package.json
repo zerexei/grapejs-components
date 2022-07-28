@@ -1,6 +1,6 @@
 {
   "name": "@zerexei/grapejs-components",
-  "version": "0.0.38",
+  "version": "0.0.44",
   "description": "GrapesJS Plugin Boilerplate",
   "main": "dist/@zerexei/grapejs-components.min.js",
   "scripts": {

@@ -1,7 +1,7 @@
 import { ContainersBlock } from './components/Containers';
 import { ParagraphBlock } from './Components/Paragraph';
 import { HeadingBlock } from './Components/Heading';
-import  { LinkBlock } from './Components/Link';
+import { LinkBlock } from './Components/Link';
 import { ImageBlock } from './Components/Image';
 import { VideoBlock } from './Components/Video';
 import Button, { ButtonBlock } from './Components/Button';
@@ -26,8 +26,27 @@ export default (editor, config = {}) => {
 
   const bm = editor.BlockManager;
 
- PostsBlock(bm);
- Posts(domc);
+  domc.addType('locked', {
+    extend: 'default',
+    model: {
+      defaults: {
+        locked: true,
+        hoverable: false,
+        highlightable: false,
+        selectable: false,
+      },
+    },
+    isComponent: function (el) {
+      if (el?.classList?.contains('gjs-locked')) {
+        return {
+          type: 'locked',
+        };
+      }
+    },
+  });
+
+  PostsBlock(bm);
+  Posts(domc);
 
   CarouselBlock(bm);
   Carousel(domc);
@@ -39,7 +58,6 @@ export default (editor, config = {}) => {
   LinkBlock(bm);
   ImageBlock(bm);
   VideoBlock(bm);
-
 
   // * containers
   ContainersBlock(bm);

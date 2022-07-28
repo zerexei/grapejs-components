@@ -19,7 +19,7 @@ export const PostsBlock = (bm) => {
         <div data-gjs-type="${opt.name}" class="${opt.name}">
     <div class="posts__wrapper gap-2 p-4" data-posts-limit="5"
         data-posts="vue-posts">
-        <div v-for="post in posts" v-bind:key="post.id" class="post__card p-4" style="width: 25rem"
+        <div v-for="post in posts" v-bind:key="post.id" class="post__card p-4"
             :id="\`post-card-\${post.id}\`">
             <div class="post__card__wrapper">
                 <div class="post__card__header">
