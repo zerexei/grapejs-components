@@ -51,6 +51,7 @@ export const PostsBlock = (bm) => {
   });
 };
 
+// this.$el.getAttribute('data-attribute-name');
 export default (domc) => {
   const defaultType = domc.getType('default');
   const defaultView = defaultType.view;
@@ -73,7 +74,7 @@ export default (domc) => {
           {
             type: 'number',
             // ...
-            name: 'posts-limit',
+            name: 'postsLimit',
             label: 'Limit',
             placeholder: '0-100',
             min: 0, // Minimum number value
@@ -92,14 +93,23 @@ export default (domc) => {
           },
           {
             type: 'button',
-            // ...
-            text: 'Click me',
+            text: 'Save',
             full: true, // Full width button
-            command: (editor) => alert('Hello'),
+            command: (editor) => {
+              editor.store();
+              window.onbeforeunload = null;
+              setTimeout(() => window.location.reload(), 500);
+            },
           },
         ],
       },
       updated(property, value, previous) {
+        if (value.postsLimit) {
+          const child = this.getChildAt(0);
+          child.addAttributes({"data-posts-limit": value.postsLimit});
+        }
+        
+
         if (value.type == '1') {
           this.removeClass(['bg-red-500 ', 'bg-blue-500']);
         } else if (value.type == '2') {
