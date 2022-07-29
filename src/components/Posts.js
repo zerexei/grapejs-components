@@ -101,14 +101,24 @@ export default (domc) => {
               setTimeout(() => window.location.reload(), 500);
             },
           },
+          {
+            type: 'button',
+            text: 'Edit',
+            full: true, // Full width button
+            command: function (editor) {
+              console.log(editor, this);
+              // editor.store();
+              // window.onbeforeunload = null;
+              // setTimeout(() => window.location.reload(), 500);
+            },
+          },
         ],
       },
       updated(property, value, previous) {
         if (value.postsLimit) {
           const child = this.getChildAt(0);
-          child.addAttributes({"data-posts-limit": value.postsLimit});
+          child.addAttributes({ 'data-posts-limit': value.postsLimit });
         }
-        
 
         if (value.type == '1') {
           this.removeClass(['bg-red-500 ', 'bg-blue-500']);
