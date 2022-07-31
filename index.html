@@ -29,8 +29,22 @@
         container: '#gjs',
         fromElement: true,
         plugins: ['zerexei-components'],
+        styleManager: {
+          sectors: [
+            {
+              name: 'First sector',
+              properties: ['width', 'min-width', 'height', 'min-height'],
+            },
+            {
+              name: 'Second sector',
+              properties: ['color', 'font-size'],
+            },
+          ],
+        },
         canvas: {
-          styles: ['https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'],
+          styles: [
+            'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css',
+          ],
           scripts: [
             'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js',
             'https://cdn.tailwindcss.com',
