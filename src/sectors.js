@@ -4,36 +4,59 @@ export default (editor, option) => {
   sm.addSector('mySector', {
     name: 'My sector',
     open: true,
-    properties: [{ name: 'My property' }, { name: 'color' }],
   });
 
-  sm.addProperty(
-    'mySector',
-    {
-      label: 'Minimum height',
-      property: 'min-height',
-      type: 'select',
-      default: '100px',
-      options: [
-        { id: '100px', label: '100' },
-        { id: '200px', label: '200' },
-      ],
-    },
-    { at: 0 }
-  );
-
-  sm.addSector('mySector 2', {
-    name: 'My sector 2',
-    open: true,
-    properties: [{ name: 'My property 2' }],
+  sm.addProperty('mySector', {
+    type: 'radio',
+    property: 'width',
+    label: 'Width',
+    default: 'full',
+    // Additional props
+    options: [
+      { id: '25%', label: '1/4' },
+      { id: '50%', label: '1/2' },
+      { id: '75%', label: '3/4' },
+      { id: '100%', label: 'full' },
+    ],
   });
 
+  sm.addProperty('mySector', {
+    type: 'radio',
+    property: 'margin',
+    label: 'margin placement',
+    default: 'left',
+    // Additional props
+    options: [
+      { id: '0 auto 0 0', label: 'left' },
+      { id: '0 auto 0', label: 'center' },
+      { id: '0 0 0 auto', label: 'right' },
+    ],
+  });
 
-// TODO: dynamic show style based on current style | ex. d-flex: show flex sector
-//   editor.on('style:target', (target) => {
-//     console.log(target);
-//     // editor.on('style:property:update', (prop, change) => {
-//     //   console.log(prop, change);
-//     // });
-//   });
+  // * TYPOGRAPHY------------------
+  sm.addSector('typographySector', {
+    name: 'Typography',
+  });
+
+  sm.addProperty('typographySector', {
+    type: 'radio',
+    property: 'font-size',
+    label: 'Font Size',
+    default: 'normal',
+    // Additional props
+    options: [
+      { id: '14px', label: 'sm' },
+      { id: '16px', label: 'normal' },
+      { id: '18px', label: 'md' },
+      { id: '24px', label: 'lg' },
+    ],
+  });
+
+  // TODO: dynamic show style based on current style | ex. d-flex: show flex sector
+  //   editor.on('style:target', (target) => {
+  //     console.log(target);
+  //     // editor.on('style:property:update', (prop, change) => {
+  //     //   console.log(prop, change);
+  //     // });
+  //   });
 };
