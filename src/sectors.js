@@ -77,11 +77,22 @@ export default (editor, option) => {
     ],
   });
 
-  // TODO: dynamic show style based on current style | ex. d-flex: show flex sector
-  //   editor.on('style:target', (target) => {
-  //     console.log(target);
-  //     // editor.on('style:property:update', (prop, change) => {
-  //     //   console.log(prop, change);
-  //     // });
-  //   });
+  // dynamic show style based on current style | ex. d-flex: show flex sector
+  editor.on('style:property:update', ({ property, to }) => {
+    const prop = property.attributes;
+
+    if (prop.name == 'Display' && to.hasOwnProperty('value')) {
+      let hasFoo = sm.getProperty('typographySector', 'foo');
+
+      if (prop.value === 'inline') {
+        if (to.value == 'inline') {
+          if (!hasFoo) {
+            sm.addProperty('typographySector', { name: 'foo' });
+          }
+        }
+      } else if (hasFoo) {
+        sm.removeProperty('typographySector', 'foo');
+      }
+    }
+  });
 };
