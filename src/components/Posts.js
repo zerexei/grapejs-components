@@ -16,37 +16,84 @@ export const PostsBlock = (bm) => {
     `,
     category: opt.category,
     content: `
-        <div data-gjs-type="${opt.name}" class="${opt.name}">
-    <div data-gjs-locked="true" class="posts__wrapper gap-2 p-4" data-posts-limit="5"
-        data-posts="vue-posts">
-        <div v-for="post in posts" v-bind:key="post.id" class="post__card p-4"
-            :id="\`post-card-\${post.id}\`">
-            <div class="post__card__wrapper">
-                <div class="post__card__header">
-                    <div>
-                        <h2 v-text="post.title">Lorem Ipsum</h2>
-                    </div>
-                </div>
-                <div class="post__card__body">
-                    <div>
-                        <p v-text="post.body">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur natus iure dolorum
-                            harum quae iusto ex eius esse, asperiores exercitationem deleniti sunt a fugit perspiciatis
-                            consequuntur veniam laudantium inventore nemo.
-                        </p>
-                    </div>
-                </div>
-                <div class="post__card__footer">
-                    <div class="flex justify-end">
-                        <div>
-                            <a v-bind:href="post.id">View more</a>
+          <div data-gjs-type="${opt.name}" class="${opt.name}">
+            <div data-gjs-locked="true" class="posts__wrapper gap-2 p-4" data-posts-limit="5" data-posts="vue-posts">
+                <div v-for="post in posts" v-bind:key="post.id" class="post__card p-4" :id="\`post-card-\${post.id}\`">
+                    <div class="post__card__wrapper">
+                        <div class="post__card__img">
+                            <figure>
+                                <img src="https://picsum.photos/id/2/200" alt="card image" />
+                            </figure>
+                        </div>
+                        <div class="post__card__content">
+                            <div class="post__card__header">
+                                <div>
+                                    <h2 v-text="post.title">Lorem Ipsum</h2>
+                                </div>
+                            </div>
+                            <div class="post__card__body">
+                                <div>
+                                    <p v-text="post.body">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur natus iure
+                                        dolorum
+                                        harum quae iusto ex eius esse, asperiores exercitationem deleniti sunt a fugit
+                                        perspiciatis
+                                        consequuntur veniam laudantium inventore nemo.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="post__card__footer">
+                                <div class="flex justify-end">
+                                    <div>
+                                        <a v-bind:href="post.id" class="view-more">View more</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+
+        <style>
+
+.post-card-1 .post__card__img {
+    display: none;
+}
+
+.post-card-2 .post__card__wrapper {
+    display: flex;
+    height: 200px;
+    width: 40rem;
+}
+
+.post-card-2 .post__card__wrapper .post__card__img figure {
+    width: 200px;
+    height: 200px;
+    margin-right: 2rem;
+}
+
+.post-card-2 .post__card__content .view-more {
+    padding: 0.5rem 1rem;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.post-card-3 .post__card__wrapper {
+    width: 25rem;
+}
+
+.post-card-3 .post__card__wrapper .post__card__img figure {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 1rem;
+}
+
+.post-card-3 .post__card__content .view-more {
+    text-decoration: underline;
+}
+        </style>
 `,
   });
 };
@@ -121,13 +168,14 @@ export default (domc) => {
         }
 
         if (value.type == '1') {
-          this.removeClass(['bg-red-500 ', 'bg-blue-500']);
+          this.removeClass(['post-card-2 ', 'post-card-3']);
+          this.addClass('post-card-1');
         } else if (value.type == '2') {
-          this.removeClass(['bg-red-500 ', 'bg-blue-500']);
-          this.addClass('bg-red-500');
+          this.removeClass(['post-card-1 ', 'post-card-3']);
+          this.addClass('post-card-2');
         } else if (value.type == '3') {
-          this.removeClass(['bg-red-500 ', 'bg-blue-500']);
-          this.addClass('bg-blue-500');
+          this.removeClass(['post-card-1 ', 'post-card-2']);
+          this.addClass('post-card-3');
         }
       },
     },
