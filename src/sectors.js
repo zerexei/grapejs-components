@@ -22,6 +22,20 @@ export default (editor, option) => {
 
   sm.addProperty('mySector', {
     type: 'radio',
+    property: 'padding',
+    label: 'Padding',
+    default: 'sm',
+    // Additional props
+    options: [
+      { id: '0', label: 'None' },
+      { id: '1rem', label: 'sm' },
+      { id: '2rem', label: 'md' },
+      { id: '3rem', label: 'lg' },
+    ],
+  });
+
+  sm.addProperty('mySector', {
+    type: 'radio',
     property: 'margin',
     label: 'margin placement',
     default: 'left',
@@ -36,6 +50,17 @@ export default (editor, option) => {
   // * TYPOGRAPHY------------------
   sm.addSector('typographySector', {
     name: 'Typography',
+  });
+
+  sm.addProperty('typographySector', {
+    type: 'slider',
+    property: 'font-size',
+    label: 'Font Size',
+    default: '0%',
+    // Additional props
+    units: ['px', '%'],
+    min: 0,
+    max: 100,
   });
 
   sm.addProperty('typographySector', {
