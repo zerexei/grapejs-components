@@ -25,6 +25,7 @@ export default (editor, config = {}) => {
   // ...
 
   const bm = editor.BlockManager;
+  ParagraphBlock(bm);
 
   domc.addType('locked', {
     extend: 'default',

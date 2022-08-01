@@ -1,6 +1,7 @@
 import grapesjs from 'grapesjs';
 
 import loadComponents from './components';
+import loadSectors from './sectors';
 // import loadBlocks from './blocks';
 
 export default grapesjs.plugins.add('zerexei-components', (editor, opts = {}) => {
@@ -10,6 +11,7 @@ export default grapesjs.plugins.add('zerexei-components', (editor, opts = {}) =>
 
   // Add components
   loadComponents(editor, options);
+  loadSectors(editor, options);
 
   // Add blocks
   // loadBlocks(editor, options);
