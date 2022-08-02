@@ -19,6 +19,17 @@ export default (editor, option) => {
       { id: '100%', label: 'full' },
     ],
   });
+  
+  sm.addProperty('mySector', {
+    type: 'slider',
+    property: 'width',
+    label: 'Width',
+    default: '0%',
+    // Additional props
+    units: ['%'],
+    min: 0,
+    max: 100,
+  });
 
   sm.addProperty('mySector', {
     type: 'radio',
