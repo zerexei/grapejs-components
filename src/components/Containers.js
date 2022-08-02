@@ -17,8 +17,7 @@ export const ContainersBlock = (bm) => {
       content: `
         <div
           data-gjs-name="${container.name}"
-          class="grid md:grid-cols-${container.size}"
-          style="padding: 2rem"
+          style="display:grid; grid-template-columns: repeat(${container.size},1fr);padding: 5px"
         >
           ${`<div style="padding: 2rem"></div>`.repeat(container.size)}
         </div>
