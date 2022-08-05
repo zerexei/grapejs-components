@@ -1,9 +1,11 @@
-import Post from './Components/posts/post';
-import AboutUs from './Components/about-us';
-import InquireNow from './Components/inquire-now';
-import heroSection from './components/hero-section';
-import header from './components/headers/header';
+import aboutUs from './components/sections/about-us';
 import footer from './components/footer/footer';
+import header from './components/headers/header';
+import hero from './components/sections/hero';
+import InquireNow from './Components/inquire-now';
+import Post from './Components/posts/post';
+import productsServices from './components/sections/products-services';
+import ourWorks from './components/sections/our-works';
 
 
 
@@ -32,11 +34,13 @@ export default (editor, config = {}) => {
 
   [
     Post,
-    AboutUs,
+    aboutUs,
     InquireNow,
-    heroSection,
+    hero,
     header,
     footer,
+    productsServices,
+    ourWorks,
   ].map(component => component(editor, config));
   
   // NavbarCategoryTypeABlock(bm);
