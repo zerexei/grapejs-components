@@ -113,3 +113,6 @@ export const PostTypeBBlock = (bm) => {
     content: content
   });
 };
+
+
+// replaceWith('<div>Some new content</div>');

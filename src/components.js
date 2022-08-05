@@ -1,5 +1,7 @@
 import Post from './Components/posts/post';
 import AboutUs from './Components/about-us';
+import InquireNow from './Components/inquire-now';
+import heroSection from './components/hero-section';
 
 
 
@@ -54,6 +56,8 @@ export default (editor, config = {}) => {
   [
     Post,
     AboutUs,
+    InquireNow,
+    heroSection,
   ].map(component => component(editor, config));
 
 
@@ -101,7 +105,7 @@ export default (editor, config = {}) => {
 
   // // templates
   // HeroBlock(bm);
-  Alpine(editor);
+  // Alpine(editor);
 
   // * blocks
   ButtonBlock(bm);
