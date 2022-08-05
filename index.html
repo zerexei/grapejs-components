@@ -9,15 +9,98 @@
     />
     <script src="https://unpkg.com/grapesjs"></script>
     <script src="dist/@zerexei/grapejs-components.min.js"></script>
-    <style>
-      body,
-      html {
-        height: 100%;
-        margin: 0;
-      }
+    
+     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
+        html, body {
+          height: 100%;
+          margin: 0;
+        }
 
+        iframe {
+            padding: 0 0 1rem;
+        }
 
+        .gjs-one-bg {
+            background-color: #dfdfdf;
+        }
+
+        .gjs-cv-canvas {
+            left: unset;
+            right: 0;
+        }
+
+        .gjs-pn-views-container {
+            left: 0;
+            right: unset;
+        }
+
+        .gjs-pn-panels{
+            /* box-shadow: 0 3px 4px 0 rgb(0 0 0 / 15%); */
+        }
+        .gjs-pn-panel {
+            z-index: 0;
+        }
+
+        .gjs-pn-devices-c,
+        .gjs-pn-options,
+        .gjs-pn-views,
+        .gjs-pn-commands {
+            z-index: 10;
+        }
+
+        .gjs-pn-views {
+            border: 0;
+        }
+
+        .gjs-two-color,
+        .gjs-four-color {
+            color: #41b883;
+            border-color: #41b883;
+        }
+
+        .gjs-pn-btn.gjs-pn-active {
+            background-color: unset;
+            border: 1px solid #41b883;
+        }
+
+        .gjs-clm-tags,
+        .gjs-sm-sector,
+        .gjs-block-category,
+        .gjs-blocks-c {
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        .gjs-category-title,
+        .gjs-layer-title,
+        .gjs-block-category .gjs-title,
+        .gjs-sm-sector-title {
+            background-color: unset;
+            border-bottom: 0;
+        }
+
+        .gjs-block {
+            box-shadow: 0;
+            background-color: unset;
+        }
+
+        .gjs-title {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #7a7a7a!important;
+        }
     </style>
   </head>
   <body>

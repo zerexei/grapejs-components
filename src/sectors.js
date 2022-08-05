@@ -1,3 +1,6 @@
+
+// https://www.youtube.com/watch?v=OiqM9OTHtz8
+
 export default (editor, option) => {
   const sm = editor.StyleManager;
 
