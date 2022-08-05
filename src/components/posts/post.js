@@ -6,7 +6,7 @@ let opt = {
 
 const componentType = {
   a: `
-  <div class="${opt.name} mb-6 post--a p-2" type="A">
+  <div class="${opt.name} mb-6 post--a p-2" type="a">
     <div class="post--a__header">
         <h2 class="post--a__section__title section-title--b">
             CAT 1
@@ -52,7 +52,7 @@ const componentType = {
     </div>
 </div>
 `,
-  b: `<div class="${opt.name} mb-6 post--b p-2" type="B">
+  b: `<div class="${opt.name} mb-6 post--b p-2" type="b">
     <div class="post--b__header">
         <h2 class="post--b__header__title section-title--b">
             Sub-Cat
@@ -144,7 +144,7 @@ const componentType = {
             </div>
         </div>
 </div>`,
-  c: `<div class="${opt.name} post--c p-2" type="C">
+  c: `<div class="${opt.name} post--c p-2" type="c">
     <div class="post--c__header">
         <h2 class="section-title--b">LATEST ARTICLE</h2>
     </div>
