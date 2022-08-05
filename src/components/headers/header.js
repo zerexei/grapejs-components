@@ -13,6 +13,22 @@ const componentType = {
     <div class="flex-1 bg-gray-400 h-16"></div>
 </div>
   `,
+  b: `
+<header class="${opt.name}" type="b">
+    <div class="h-20 max-w-screen-lg mx-auto flex justify-between items-center">
+        <div>
+            <img src="https://purplebug.net/img/purplebug-logo.svg" alt="purple bug inc logo" style="height: 43px" />
+        </div>
+
+        <div class="flex gap-5 uppercase font-bold" style="font-size: 14px">
+            <a href="#">about us</a>
+            <a href="#">products/services</a>
+            <a href="#">our works</a>
+            <a href="#">contact us</a>
+        </div>
+    </div>
+</header>
+`
 };
 
 export default (editor, config) => {

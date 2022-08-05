@@ -134,6 +134,82 @@ const componentType = {
     </div>
 </div>
 </div>`,
+c: `
+<footer class="${opt.name} footer--a" type="c">
+    <div class="max-w-screen-lg mx-auto grid grid-cols-4 gap-4">
+        <div class="section">
+            <h2 class="title">About Us</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Non eu id diam ut maecenas. Ornare diam sit mauris id
+                neque pharetra, odio ornare. Varius aliquet tempus,
+                ultrices ipsum in volutpat blandit
+            </p>
+        </div>
+        <div class="section">
+            <h2 class="title">Our Product/ Services</h2>
+            <div class="flex flex-col">
+                <p><span class="text-primary mr-4 text-xl">&check;</span>Lorem Ipsum</p>
+                <p><span class="text-primary mr-4 text-xl">&check;</span>Lorem Ipsum</p>
+                <p><span class="text-primary mr-4 text-xl">&check;</span>Lorem Ipsum</p>
+                <p><span class="text-primary mr-4 text-xl">&check;</span>Lorem Ipsum</p>
+                <p><span class="text-primary mr-4 text-xl">&check;</span>Lorem Ipsum</p>
+                <p><span class="text-primary mr-4 text-xl">&check;</span>Lorem Ipsum</p>
+            </div>
+        </div>
+        <div class="section">
+            <h2 class="title">Categories</h2>
+            <div class="grid grid-cols-3 gap-2">
+                <span style="width: 63px; height: 37px" class="border"></span>
+                <span style="width: 63px; height: 37px" class="border"></span>
+                <span style="width: 63px; height: 37px" class="border"></span>
+                <span style="width: 63px; height: 37px" class="border"></span>
+                <span style="width: 63px; height: 37px" class="border"></span>
+                <span style="width: 63px; height: 37px" class="border"></span>
+                <span style="width: 63px; height: 37px" class="border"></span>
+                <span style="width: 63px; height: 37px" class="border"></span>
+                <span style="width: 63px; height: 37px" class="border"></span>
+                <span style="width: 63px; height: 37px" class="border"></span>
+                <span style="width: 63px; height: 37px" class="border"></span>
+                <span style="width: 63px; height: 37px" class="border"></span>
+                <span style="width: 63px; height: 37px" class="border"></span>
+            </div>
+        </div>
+        <div class="section">
+            <h2 class="title">Latest Posts</h2>
+
+            <div class="flex items-center mb-4">
+                <span class="inline-block mr-4 border" style="width: 88px; height: 88px"></span>
+                <div class="flex-1">
+                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="text-xs">Augost 12, 1212</p>
+                </div>
+            </div>
+
+            <div class="flex items-center">
+                <span class="inline-block mr-4 border" style="width: 88px; height: 88px"></span>
+                <div class="flex-1">
+                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="text-xs">Augost 12, 1212</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>`,
+d: `
+<!-- FOOTER -->
+<div class="${opt.name} section" type="d">
+    <div class="section__content max-w-screen-lg mx-auto">
+        <div class="grid grid-cols-4">
+            <div class="border" style="height: 300px"></div>
+            <div class="border" style="height: 300px"></div>
+            <div class="border" style="height: 300px"></div>
+            <div class="border" style="height: 300px"></div>
+        </div>
+    </div>
+</div>
+
+`
 };
 
 export default (editor, config) => {

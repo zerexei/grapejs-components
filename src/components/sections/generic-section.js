@@ -52,6 +52,34 @@ const componentType = {
     </p>
 </div>
 `,
+c: `
+<div class="${opt.name} section bg-primary" type="c">
+    <div class="section__content max-w-screen-lg mx-auto flex justify-between">
+        <div class="flex items-center" style="width:300px">
+            <div class="border mr-6" style="width: 88px; height: 88px"></div>
+            <div class="flex-1">
+                <h3 class="font-bold text-white text-base">Contact</h3>
+                <p class="text-white">+123 4567 7896</p>
+            </div>
+        </div>
+
+        <div class="flex items-center" style="width:300px">
+            <div class="border mr-6" style="width: 88px; height: 88px"></div>
+            <div class="flex-1">
+                <h3 class="font-bold text-white text-base">Address</h3>
+                <p class="text-white">Unit 1 Building Name, Village City, Philippines</p>
+            </div>
+        </div>
+
+        <div class="flex items-center" style="width:300px">
+            <div class="border mr-6" style="width: 88px; height: 88px"></div>
+            <div class="flex-1">
+                <h3 class="font-bold text-white text-base">Email</h3>
+                <p class="text-white">youremail@companyname.com</p>
+            </div>
+        </div>
+    </div>
+</div>`
 };
 
 export default (editor, config) => {
