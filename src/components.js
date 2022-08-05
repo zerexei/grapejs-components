@@ -1,34 +1,18 @@
 import footer from './components/footer/footer';
+import genericUs from './components/generic-us';
+import genericSection from './components/sections/generic-section';
 import header from './components/headers/header';
 import hero from './components/sections/hero';
 import inquireNow from './Components/inquire-now';
-import Post from './Components/posts/post';
-import productsServices from './components/sections/products-services';
+import navbar from './components/navbar/navbar';
 import ourWorks from './components/sections/our-works';
 import ourClients from './components/sections/our-clients';
-import whoWeAre from './components/sections/who-we-are';
-import genericUs from './components/generic-us';
-import genericSection from './components/sections/generic-section';
-import testimonial from './components/sections/testimonial';
+import Post from './Components/posts/post';
+import productsServices from './components/sections/products-services';
 import projects from './components/sections/projects';
-
-
-
-// import { HeaderTypeABlock } from './components/headers/header-a';
-// import { ContainersBlock } from './components/Containers';
-// import { ParagraphBlock } from './Components/Paragraph';
-// import { HeadingBlock } from './Components/Heading';
-// import { LinkBlock } from './Components/Link';
-// import { ImageBlock } from './Components/Image';
-// import { VideoBlock } from './Components/Video';
-// import Button, { ButtonBlock } from './Components/Button';
-// import { HrBlock } from './Components/Hr';
-// import Carousel, { CarouselBlock } from './Components/Carousel';
-// import Posts, { PostsBlock } from './Components/Posts';
-// import { NavbarCategoryTypeABlock } from './components/navbar/nav-category-a';
-// import { SocialMediaTypeABlock } from './components/social-media/social-media-a';
-// import { FooterTypeABlock } from './components/footer/footer-a';
-// import { FooterTypeBBlock } from './components/footer/footer-b';
+import socialMedia from './components/social-media/social-media';
+import testimonial from './components/sections/testimonial';
+import whoWeAre from './components/sections/who-we-are';
 
 export default (editor, config = {}) => {
   const domc = editor.DomComponents;
@@ -56,12 +40,14 @@ export default (editor, config = {}) => {
     genericSection,
     testimonial,
     projects,
+
+    // NAVBARS
+    navbar,
+
+    // SOCIAL MEDIA
+    socialMedia
   ].map(component => component(editor, config));
   
-  // NavbarCategoryTypeABlock(bm);
-
-  // SocialMediaTypeABlock(bm);
-
   // ===========================================================
 
   // PostsBlock(bm);
@@ -70,31 +56,17 @@ export default (editor, config = {}) => {
   // CarouselBlock(bm);
   // Carousel(domc);
 
-  // // FooBlock(bm);
-  // // Foo(domc);
-
-  // // * basic
   // LinkBlock(bm);
   // ImageBlock(bm);
   // VideoBlock(bm);
 
-  // // * containers
   // ContainersBlock(bm);
 
-  // // * typography
   // ParagraphBlock(bm);
   // HeadingBlock(bm);
 
-  // // // templates
-  // // HeroBlock(bm);
-  // // Alpine(editor);
-
-  // // * blocks
   // ButtonBlock(bm);
   // Button(domc);
 
   // HrBlock(bm);
-
-  // // TabsBlock(bm);
-  // // Tabs(editor);
 };

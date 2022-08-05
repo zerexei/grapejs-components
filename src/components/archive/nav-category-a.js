@@ -1,6 +1,6 @@
 let opt = {
-  label: 'Navbar Category Type A',
-  name: 'navbar__category__type--a',
+  label: 'Navbar',
+  name: 'navbar-component',
   category: 'Navbar Component',
   target(el) {
     return el?.classList?.contains(`${this.name}`)
