@@ -1,4 +1,3 @@
-import aboutUs from './components/sections/about-us';
 import footer from './components/footer/footer';
 import header from './components/headers/header';
 import hero from './components/sections/hero';
@@ -6,6 +5,10 @@ import InquireNow from './Components/inquire-now';
 import Post from './Components/posts/post';
 import productsServices from './components/sections/products-services';
 import ourWorks from './components/sections/our-works';
+import whoWeAre from './components/sections/who-we-are';
+import genericUs from './components/generic-us';
+import genericSection from './components/sections/generic-section';
+import testimonial from './components/sections/testimonial';
 
 
 
@@ -33,14 +36,22 @@ export default (editor, config = {}) => {
   const defaultView = defaultType.view;
 
   [
+    // POST
     Post,
-    aboutUs,
+
+    // COMPONENTS
+    genericUs,
     InquireNow,
+
+    // SECTIONS
     hero,
     header,
     footer,
     productsServices,
     ourWorks,
+    whoWeAre,
+    genericSection,
+    testimonial,
   ].map(component => component(editor, config));
   
   // NavbarCategoryTypeABlock(bm);

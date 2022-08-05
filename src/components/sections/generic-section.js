@@ -1,12 +1,12 @@
 let opt = {
-  label: 'About Us',
-  name: 'about-us-component',
-  category: 'Components',
+  label: 'Section',
+  name: 'generic-section-component',
+  category: 'Sections',
 };
 
 const componentType = {
   a: `
-  <div class="${opt.name} max-w-screen-lg mx-auto p-2">
+  <div class="${opt.name} max-w-screen-lg mx-auto p-2" type="a">
 
     <h2 class="text-center">lorem ipsum it dolor</h2>
 
@@ -37,8 +37,21 @@ const componentType = {
     </div>
 </div>
 `,
-
-
+  b: `
+<div class="${opt.name} section bg-gray-100 p-2" type="b">
+    <div class="section__content max-w-screen-lg mx-auto flex justify-center gap-5 mb-6">
+        <div class="border" style="width: 180px; height: 137px"></div>
+        <div class="border" style="width: 180px; height: 137px"></div>
+        <div class="border" style="width: 180px; height: 137px"></div>
+    </div>
+    <h2 class="title uppercase">lorem ipsum it dolor</h2>
+    <p class="info mb-6">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Placerat massa in fermentum aenean tincidunt amet neque,
+        pharetra, integer. Duis urna, tempor risus at.
+    </p>
+</div>
+`,
 };
 
 export default (editor, config) => {
@@ -65,20 +78,20 @@ export default (editor, config) => {
             options: [
               { value: 'a', name: 'Style 1' },
               { value: 'b', name: 'Style 2' },
-              { value: 'C', name: 'Style 3' },
-              { value: 'D', name: 'Style 4' },
-              { value: 'E', name: 'Style 5' },
-              { value: 'F', name: 'Style 6' },
-              { value: 'G', name: 'Style 7' },
-              { value: 'H', name: 'Style 8' },
+              { value: 'c', name: 'Style 3' },
+              { value: 'd', name: 'Style 4' },
+              { value: 'e', name: 'Style 5' },
+              { value: 'f', name: 'Style 6' },
+              { value: 'g', name: 'Style 7' },
+              { value: 'h', name: 'Style 8' },
             ],
           },
         ],
       },
       updated(property, value, previous) {
         if (value?.type && value.type in componentType) {
-            this.replaceWith(componentType[value.type]);
-            editor.select(null);
+          this.replaceWith(componentType[value.type]);
+          editor.select(null);
         }
       },
     },

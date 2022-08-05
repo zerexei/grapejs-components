@@ -1,34 +1,30 @@
 let opt = {
-  label: 'Our Works',
-  name: 'our-works-component',
+  label: 'Testimonial',
+  name: 'testimonial-component',
   category: 'Sections',
 };
 
 const componentType = {
   a: `
-<div class="${opt.name} section">
-    <h2 class="title uppercase">our works</h2>
-    <p class="info">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Placerat massa in fermentum aenean tincidunt amet neque,
-        pharetra, integer. Duis urna, tempor risus at.
-    </p>
-
-    <div class="section__content flex">
-        <div class="border" style="width: 512px; height: 341px"></div>
-        <div class="border" style="width: 512px; height: 341px"></div>
-        <div class="border" style="width: 512px; height: 341px"></div>
-        <div class="border" style="width: 512px; height: 341px"></div>
-    </div>
-
-    <div class="flex justify-center items-center bg-gray-200 py-6">
-        <h3 class="text-2xl font-bold uppercase mr-32">
-            lorem ipsum it dolor
+  <div id="testimonial-carousel" class="section text-center bg-gray-600">
+    <div class="section__content max-w-screen-lg mx-auto">
+        <div class="border mx-auto" style="width: 88px; height: 88px"></div>
+        <p class="my-12 mx-auto text-white" style="width: 908px">
+            “Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Non eu id diam ut maecenas. Ornare diam sit mauris
+            id neque pharetra, odio ornare. Varius aliquet tempus,
+            ultrices ipsum in volutpat blandit congue felis. Quisque
+            vitae aliquam nunc risus massa velit vestibulum,
+            egestas.”
+        </p>
+        <h3 class="text-white" style="font-size: 14px">
+            JOHN SMITH DOE
         </h3>
-        <a href="#" class="btn bg-primary text-white">view all services</a>
+        <h4 class="text-white" style="font-size: 11px">
+            CEO OF COMPANY NAME
+        </h4>
     </div>
 </div>
-
 `,
 };
 
