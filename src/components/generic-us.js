@@ -6,7 +6,7 @@ let opt = {
 
 const componentType = {
 a: `
-<div id="why-us" class="section">
+<div id="why-us" class="${opt.name} section">
     <h2 class="title uppercase">why us</h2>
     <p class="info mb-6">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.

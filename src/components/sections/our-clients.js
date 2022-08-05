@@ -6,25 +6,20 @@ let opt = {
 
 const componentType = {
   a: `
-  <div ${opt.name} id="testimonial-carousel" class="section text-center bg-gray-600" type="a">
-    <div class="section__content max-w-screen-lg mx-auto">
-        <div class="border mx-auto" style="width: 88px; height: 88px"></div>
-        <p class="my-12 mx-auto text-white" style="width: 908px">
-            “Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Non eu id diam ut maecenas. Ornare diam sit mauris
-            id neque pharetra, odio ornare. Varius aliquet tempus,
-            ultrices ipsum in volutpat blandit congue felis. Quisque
-            vitae aliquam nunc risus massa velit vestibulum,
-            egestas.”
-        </p>
-        <h3 class="text-white" style="font-size: 14px">
-            JOHN SMITH DOE
-        </h3>
-        <h4 class="text-white" style="font-size: 11px">
-            CEO OF COMPANY NAME
-        </h4>
-    </div>
+  <!-- CLIENTS -->
+<div id="clients-carousel" class="${opt.name} section">
+    <h2 class="title uppercase">our clients</h2>
+
+    <div class="section__content max-w-screen-lg mx-auto flex justify-center gap-5 mb-6">
+        <div class="border mx-auto mb-6" style="width: 140px; height: 140px"></div>
+        <div class="border mx-auto mb-6" style="width: 140px; height: 140px"></div>
+        <div class="border mx-auto mb-6" style="width: 140px; height: 140px"></div>
+        <div class="border mx-auto mb-6" style="width: 140px; height: 140px"></div>
+        <div class="border mx-auto mb-6" style="width: 140px; height: 140px"></div>
+        <div class="border mx-auto mb-6" style="width: 140px; height: 140px"></div>
 </div>
+</div>
+
 `,
 };
 
@@ -63,10 +58,10 @@ export default (editor, config) => {
         ],
       },
       updated(property, value, previous) {
-            if (value?.type && value.type in componentType) {
-                this.replaceWith(componentType[value.type]);
-                editor.select(null);
-            }
+        if (value?.type && value.type in componentType) {
+          this.replaceWith(componentType[value.type]);
+          editor.select(null);
+        }
       },
     },
     isComponent: (el) => {

@@ -1,14 +1,16 @@
 import footer from './components/footer/footer';
 import header from './components/headers/header';
 import hero from './components/sections/hero';
-import InquireNow from './Components/inquire-now';
+import inquireNow from './Components/inquire-now';
 import Post from './Components/posts/post';
 import productsServices from './components/sections/products-services';
 import ourWorks from './components/sections/our-works';
+import ourClients from './components/sections/our-clients';
 import whoWeAre from './components/sections/who-we-are';
 import genericUs from './components/generic-us';
 import genericSection from './components/sections/generic-section';
 import testimonial from './components/sections/testimonial';
+import projects from './components/sections/projects';
 
 
 
@@ -41,7 +43,7 @@ export default (editor, config = {}) => {
 
     // COMPONENTS
     genericUs,
-    InquireNow,
+    inquireNow,
 
     // SECTIONS
     hero,
@@ -49,9 +51,11 @@ export default (editor, config = {}) => {
     footer,
     productsServices,
     ourWorks,
+    ourClients,
     whoWeAre,
     genericSection,
     testimonial,
+    projects,
   ].map(component => component(editor, config));
   
   // NavbarCategoryTypeABlock(bm);

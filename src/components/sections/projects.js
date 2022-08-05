@@ -33,7 +33,7 @@ const componentType = {
     </div>
 </div>
 `,
-b: `
+  b: `
   <div class="${opt.name} max-w-screen-lg mx-auto flex gap-6" type="b">
     <div class="flex-1">
         <div style="width: 570px; height: 380px" class="mb-6 border border-red-500"></div>
@@ -44,7 +44,7 @@ b: `
         <div style="width: 570px; height: 380px" class="border border-red-500"></div>
     </div>
     <div class="flex-1">
-        {{-- component --}}
+        <!-- component -->
         <div class="mb-6">
             <h2 class="font-bold" style="font-size: 20px">lorem ipsum</h2>
             <span class="block bg-primary my-2" style="height: 2px; width: 2.5rem"></span>
@@ -56,7 +56,7 @@ b: `
             </p>
         </div>
 
-        {{-- component --}}
+        <!-- component -->
         <div>
             <h2 class="font-bold" style="font-size: 20px">lorem ipsum it dolor</h2>
             <span class="block bg-primary my-2" style="height: 2px; width: 2.5rem"></span>
@@ -78,7 +78,7 @@ b: `
             </div>
         </div>
 
-        {{-- component --}}
+        <!-- component -->
         <div>
             <h2 class="font-bold" style="font-size: 20px">lorem ipsum it dolor</h2>
             <span class="block bg-primary my-2" style="height: 2px; width: 2.5rem"></span>
@@ -102,7 +102,7 @@ b: `
         </div>
     </div>
 </div>
-`
+`,
 };
 
 export default (editor, config) => {
@@ -140,10 +140,10 @@ export default (editor, config) => {
         ],
       },
       updated(property, value, previous) {
-            if (value?.type && value.type in componentType) {
-                this.replaceWith(componentType[value.type]);
-                editor.select(null);
-            }
+        if (value?.type && value.type in componentType) {
+          this.replaceWith(componentType[value.type]);
+          editor.select(null);
+        }
       },
     },
     isComponent: (el) => {

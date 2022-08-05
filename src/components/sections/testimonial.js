@@ -6,7 +6,7 @@ let opt = {
 
 const componentType = {
   a: `
-  <div id="testimonial-carousel" class="section text-center bg-gray-600">
+  <div id="testimonial-carousel" class="${opt.name} section text-center bg-gray-600">
     <div class="section__content max-w-screen-lg mx-auto">
         <div class="border mx-auto" style="width: 88px; height: 88px"></div>
         <p class="my-12 mx-auto text-white" style="width: 908px">
