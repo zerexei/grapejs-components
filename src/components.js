@@ -16,6 +16,7 @@ import whoWeAre from './components/sections/who-we-are';
 import scripted from './components/sections/scripted';
 
 import {ImageBlock} from './components/Image'
+import dynamicPost from './components/posts/dynamic-post';
 
 export default (editor, config = {}) => {
   const domc = editor.DomComponents;
@@ -29,6 +30,7 @@ export default (editor, config = {}) => {
 
     // POST
     Post,
+    dynamicPost,
 
     // COMPONENTS
     genericUs,
