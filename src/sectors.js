@@ -1,5 +1,8 @@
-
 // https://www.youtube.com/watch?v=OiqM9OTHtz8
+// console.log(styleManager.getSectors())
+// @see https://www.youtube.com/watch?v=OiqM9OTHtz8
+// @see https://grapesjs.com/docs/modules/Style-manager.html#component-constraints
+// @see https://grapesjs.com/docs/modules/Style-manager.html#customization
 
 export default (editor, option) => {
   const sm = editor.StyleManager;
@@ -22,7 +25,7 @@ export default (editor, option) => {
       { id: '100%', label: 'full' },
     ],
   });
-  
+
   sm.addProperty('mySector', {
     type: 'slider',
     property: 'width',

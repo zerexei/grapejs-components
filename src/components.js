@@ -13,6 +13,9 @@ import projects from './components/sections/projects';
 import socialMedia from './components/social-media/social-media';
 import testimonial from './components/sections/testimonial';
 import whoWeAre from './components/sections/who-we-are';
+import scripted from './components/sections/scripted';
+
+import {ImageBlock} from './components/Image'
 
 export default (editor, config = {}) => {
   const domc = editor.DomComponents;
@@ -22,6 +25,8 @@ export default (editor, config = {}) => {
   const defaultView = defaultType.view;
 
   [
+    scripted,
+
     // POST
     Post,
 
@@ -57,7 +62,7 @@ export default (editor, config = {}) => {
   // Carousel(domc);
 
   // LinkBlock(bm);
-  // ImageBlock(bm);
+  ImageBlock(bm);
   // VideoBlock(bm);
 
   // ContainersBlock(bm);
