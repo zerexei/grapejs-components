@@ -32,6 +32,39 @@ const componentType = {
     </div>
 </div>
 `,
+b: `
+<div class="${opt.name} banner-3">
+        <div class="banner-3__inner max-w-screen-lg mx-auto">
+            <h2 class="mb-2 text-2xl font-bold">CATEGORY</h2>
+            <div class="flex gap-2 mb-4">
+                <span class="sub-cat">Sub-cat</span>
+                <span class="sub-cat">Sub-cat</span>
+                <span class="sub-cat">Sub-cat</span>
+                <span class="sub-cat">Sub-cat</span>
+            </div>
+            <p style="width: 487px">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Dui nullam et venenatis ac, eu bibendum lorem odio.
+                Nulla risus adipiscing adipiscing augue quis ac metus in
+            </p>
+        </div>
+    </div>
+
+    <style>
+        .banner-3 {
+            width: 100%;
+            height: 617px;
+            background-color: #D9D9D9;
+        }
+
+        .banner-3 .banner-3__inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+    </style>
+    `
 };
 
 export default (editor, config) => {
