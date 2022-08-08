@@ -15,8 +15,10 @@ import testimonial from './components/sections/testimonial';
 import whoWeAre from './components/sections/who-we-are';
 import scripted from './components/sections/scripted';
 
-import {ImageBlock} from './components/Image'
 import dynamicPost from './components/posts/dynamic-post';
+import button from './components/basics/button';
+import buttonLink from './components/basics/button-link';
+import basics from './components/basics/basics';
 
 export default (editor, config = {}) => {
   const domc = editor.DomComponents;
@@ -26,7 +28,11 @@ export default (editor, config = {}) => {
   const defaultView = defaultType.view;
 
   [
+    // BASIC
     scripted,
+    basics,
+    button,
+    buttonLink,
 
     // POST
     Post,
@@ -52,9 +58,9 @@ export default (editor, config = {}) => {
     navbar,
 
     // SOCIAL MEDIA
-    socialMedia
-  ].map(component => component(editor, config));
-  
+    socialMedia,
+  ].map((component) => component(editor, config));
+
   // ===========================================================
 
   // PostsBlock(bm);
@@ -64,7 +70,7 @@ export default (editor, config = {}) => {
   // Carousel(domc);
 
   // LinkBlock(bm);
-  ImageBlock(bm);
+  // ImageBlock(bm);
   // VideoBlock(bm);
 
   // ContainersBlock(bm);

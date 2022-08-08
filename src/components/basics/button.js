@@ -1,11 +1,11 @@
 let opt = {
-  label: 'Hello World',
-  name: 'HelloWorld-component',
-  category: 'HelloWorld',
+  label: 'Button',
+  name: 'button-component',
+  category: 'Basic',
 };
 
 const componentType = {
-  a: `<div>Hello World!</div>`,
+  a: `<button class="${opt.name}" type="button" style="padding: .5rem 1.5rem">Button</button>`,
 };
 
 export default (editor, config) => {
@@ -27,17 +27,25 @@ export default (editor, config) => {
         traits: [
           {
             type: 'select',
-            label: 'Style',
-            name: 'type',
+            label: 'Type',
+            options: [
+              { value: 'submit', name: 'submit' },
+              { value: 'button', name: 'button' },
+            ],
+          },
+          {
+            type: 'select', // Type of the trait
+            label: 'Style', // The label you will see in Settings
+            name: 'type', // The name of the attribute/property to use on component
             options: [
               { value: 'a', name: 'Style 1' },
               { value: 'b', name: 'Style 2' },
-              { value: 'c', name: 'Style 3' },
-              { value: 'd', name: 'Style 4' },
-              { value: 'e', name: 'Style 5' },
-              { value: 'f', name: 'Style 6' },
-              { value: 'g', name: 'Style 7' },
-              { value: 'h', name: 'Style 8' },
+              { value: 'C', name: 'Style 3' },
+              { value: 'D', name: 'Style 4' },
+              { value: 'E', name: 'Style 5' },
+              { value: 'F', name: 'Style 6' },
+              { value: 'G', name: 'Style 7' },
+              { value: 'H', name: 'Style 8' },
             ],
           },
         ],

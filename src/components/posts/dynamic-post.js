@@ -6,12 +6,12 @@ let opt = {
 
 const componentType = {
   a: `<div class="${opt.name}">
-            <div data-gjs-locked="true" class="posts__wrapper gap-2 p-4" data-posts-limit="5" data-posts="vue-posts">
+            <div class="gjs-select-false posts__wrapper gap-2 p-4" data-posts-limit="5" data-posts="vue-posts">
                 <div v-for="post in posts" v-bind:key="post.id" class="post__card p-4" :id="\`post-card-\${post.id}\`">
                     <div class="post__card__wrapper">
                         <div class="post__card__img">
                             <figure>
-                                <img src="https://picsum.photos/id/2/200" alt="card image" />
+                                <img src="https://picsum.photos/id/2/200" alt="card image" style= />
                             </figure>
                         </div>
                         <div class="post__card__content">
@@ -124,7 +124,8 @@ const traits = [
     command: (editor) => {
       editor.store();
       window.onbeforeunload = null;
-      setTimeout(() => window.location.reload(), 500);
+      const url = window.location.href.split('?')[0];
+      setTimeout(() => window.location.replace(url), 500);
     },
   },
   {
@@ -132,7 +133,10 @@ const traits = [
     text: 'Edit',
     full: true, // Full width button
     command: function (editor) {
-      console.log(editor, this);
+      const url = window.location.href.split('?')[0] + '?edit=true';
+      setTimeout(() => window.location.replace(url), 500);
+      console.log();
+      //   console.log(editor, this);
       // editor.store();
       // window.onbeforeunload = null;
       // setTimeout(() => window.location.reload(), 500);
@@ -176,7 +180,8 @@ export default (editor, config) => {
       updated(property, value, previous) {
         if (value?.type && value.type in componentType) {
           this.replaceWith(componentType[value.type]);
-          editor.select(null);
+          const url = window.location.href.split('?')[0];
+          setTimeout(() => window.location.replace(url), 500);
         }
 
         if (value.postsLimit) {

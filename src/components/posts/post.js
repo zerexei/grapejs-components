@@ -455,7 +455,7 @@ const componentType = {
     </div>
 </div>
 `,
-g: `
+  g: `
   <div class="${opt.name} post__trending__type--a post__trending-1 p-2">
     <div class="post__trending-1__section-1">
         <h2 class="post__trending-1__section__title">trending-1</h2>
@@ -533,7 +533,7 @@ g: `
     </div>
 </div>
 `,
-h: `
+  h: `
  <div class="${opt.name} mb-6 post__trending-2 p-2">
     <div class="post__trending-2__header">
         <h2 class="post__trending__section__title section-title--b">
@@ -617,8 +617,6 @@ h: `
     </div>
 </div>
 `,
-
-
 };
 
 export default (editor, config) => {
@@ -656,10 +654,10 @@ export default (editor, config) => {
         ],
       },
       updated(property, value, previous) {
-            if (value?.type && value.type in componentType) {
-                this.replaceWith(componentType[value.type]);
-                editor.select(null);
-            }
+        if (value?.type && value.type in componentType) {
+          this.replaceWith(componentType[value.type]);
+          editor.select(null);
+        }
       },
     },
     isComponent: (el) => {

@@ -21,7 +21,6 @@ export default grapesjs.plugins.add(
     // @see https://github.com/artf/grapesjs/issues/263
     const domc = editor.DomComponents;
     domc.addType('locked', {
-      extend: 'default',
       model: {
         defaults: {
           locked: true,
@@ -34,6 +33,24 @@ export default grapesjs.plugins.add(
         if (el?.classList?.contains('gjs-locked')) {
           return {
             type: 'locked',
+          };
+        }
+      },
+    });
+
+    
+    domc.addType('not-selectable', {
+      model: {
+        defaults: {
+          hoverable: false,
+          highlightable: false,
+          selectable: false,
+        },
+      },
+      isComponent: function (el) {
+        if (el?.classList?.contains('gjs-select-false')) {
+          return {
+            type: 'not-selectable',
           };
         }
       },
