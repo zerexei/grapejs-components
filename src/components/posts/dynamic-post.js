@@ -133,13 +133,10 @@ const traits = [
     text: 'Edit',
     full: true, // Full width button
     command: function (editor) {
+      editor.store();
+      window.onbeforeunload = null;
       const url = window.location.href.split('?')[0] + '?edit=true';
       setTimeout(() => window.location.replace(url), 500);
-      console.log();
-      //   console.log(editor, this);
-      // editor.store();
-      // window.onbeforeunload = null;
-      // setTimeout(() => window.location.reload(), 500);
     },
   },
   {

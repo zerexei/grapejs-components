@@ -78,7 +78,17 @@ export default (editor, config) => {
       extends: 'link',
       defaults: {
         name: 'link',
-        traits: ['url'],
+        traits: [
+          'url',
+          {
+            type: 'select',
+            label: 'target',
+            options: [
+              { value: '_blank', name: 'New Page' },
+              { value: 'false', name: 'Current Page' },
+            ],
+          },
+        ],
       },
     },
     isComponent: (el) => {
