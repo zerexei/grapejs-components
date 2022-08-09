@@ -64,21 +64,43 @@ export default (editor, option) => {
     ],
   });
 
+  sm.addProperty('mySector', {
+    type: 'radio',
+    property: 'border-radius',
+    label: 'Border Radius',
+    default: 'none',
+    // Additional props
+    options: [
+      { value: '0', label: 'none' },
+      { value: '5px', label: 'sm' },
+      { value: '8px', label: 'md' },
+      { value: '25px', label: 'lg' },
+      { value: '100%', label: 'full' },
+    ],
+  });
+
+  sm.addProperty('mySector', {
+    type: 'color',
+    property: 'background-color',
+    label: 'Background Color',
+    default: '#fff',
+  });
+
   // * TYPOGRAPHY------------------
   sm.addSector('typographySector', {
     name: 'Typography',
   });
 
-  sm.addProperty('typographySector', {
-    type: 'slider',
-    property: 'font-size',
-    label: 'Font Size',
-    default: '0%',
-    // Additional props
-    units: ['px', '%'],
-    min: 0,
-    max: 100,
-  });
+  // sm.addProperty('typographySector', {
+  //   type: 'slider',
+  //   property: 'font-size',
+  //   label: 'Font Size',
+  //   default: '0%',
+  //   // Additional props
+  //   units: ['px', '%'],
+  //   min: 0,
+  //   max: 100,
+  // });
 
   sm.addProperty('typographySector', {
     type: 'radio',

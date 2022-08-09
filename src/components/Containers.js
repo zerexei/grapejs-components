@@ -1,11 +1,12 @@
-export const ContainersBlock = (bm) => {
-
+export default (editor, config) => {
+  const bm = editor.BlockManager;
+  const domc = editor.DomComponents;
 
   // GRID ===============
   const containers = [
-    { id: 1, name: 'col-1', label: 'Col 1', size: 1 },
-    { id: 2, name: 'col-2', label: 'Col 2', size: 2 },
-    { id: 3, name: 'col-3', label: 'Col 3', size: 3 },
+    { id: 1, name: 'Column-12-component', label: 'Column 12', size: 1 },
+    { id: 2, name: 'Column-6+6-component', label: 'Column 6+6', size: 2 },
+    { id: 3, name: 'Column-4+4+4-component', label: 'Column 4+4+4', size: 3 },
   ];
 
   containers.forEach((container) => {
@@ -17,7 +18,9 @@ export const ContainersBlock = (bm) => {
       content: `
         <div
           data-gjs-name="${container.name}"
-          style="display:grid; grid-template-columns: repeat(${container.size},1fr);padding: 5px"
+          style="display:grid; grid-template-columns: repeat(${
+            container.size
+          },1fr);padding: 5px"
         >
           ${`<div style="padding: 2rem"></div>`.repeat(container.size)}
         </div>
@@ -25,6 +28,18 @@ export const ContainersBlock = (bm) => {
     });
   });
 
+  bm.add('column-9+3', {
+    label: `
+              <div>Column 9+3</div>
+          `,
+    category: 'Contianers',
+    content: `
+          <div data-gjs-name="column-9+3-component" style="display:flex;padding: 2rem;">
+          <div style="padding: 2rem;flex:1;"></div>
+          <div style="width:25%;padding:2rem"></div>
+          </div>
+      `,
+  });
 
   // FLEXBOX ===============
   bm.add('flexbox', {
@@ -33,10 +48,9 @@ export const ContainersBlock = (bm) => {
           `,
     category: 'Contianers',
     content: `
-          <div data-gjs-name="flexbox" style="display:flex;padding: 2rem;"></div>
+          <div data-gjs-name="flexbox-component" style="display:flex;padding: 2rem;"></div>
       `,
   });
-
 
   // DIV ===============
 
@@ -46,7 +60,7 @@ export const ContainersBlock = (bm) => {
           `,
     category: 'Contianers',
     content: `
-          <div data-gjs-name="customDiv" style="padding: 2rem;"></div>
+          <div data-gjs-name="customDiv-component" style="padding: 2rem;"></div>
       `,
   });
 };

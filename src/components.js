@@ -19,6 +19,7 @@ import dynamicPost from './components/posts/dynamic-post';
 import button from './components/basics/button';
 import buttonLink from './components/basics/button-link';
 import basics from './components/basics/basics';
+import Containers from './components/Containers';
 
 export default (editor, config = {}) => {
   const domc = editor.DomComponents;
@@ -33,6 +34,9 @@ export default (editor, config = {}) => {
     basics,
     button,
     buttonLink,
+
+    // layouts
+    Containers,
 
     // POST
     Post,
