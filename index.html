@@ -9,113 +9,116 @@
     />
     <script src="https://unpkg.com/grapesjs"></script>
     <script src="dist/@zerexei/grapejs-components.min.js"></script>
-    
-     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
 
-        html, body {
-          height: 100%;
-          margin: 0;
-        }
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-        iframe {
-            padding: 0 0 1rem;
-        }
-.gjs-one-bg {
-            background-color: #dfdfdf;
-        }
-        .gjs-cv-canvas {
-            left: unset;
-            right: 0;
-        }
-        .gjs-pn-views-container {
-            left: 0;
-            right: unset;
-        }
-        .gjs-pn-panels{
-            /* box-shadow: 0 3px 4px 0 rgb(0 0 0 / 15%); */
-        }
-        .gjs-pn-panel {
-            z-index: 0;
-        }
-        .gjs-pn-devices-c,
-        .gjs-pn-options,
-        .gjs-pn-views,
-        .gjs-pn-commands {
-            z-index: 10;
-        }
-        .gjs-pn-views {
-            border: 0;
-        }
-        .gjs-two-color,
-        .gjs-four-color {
-            color: #8a3d92;
-            border-color: #8a3d92;
-        }
-        .gjs-title:hover,
-        .gjs-pn-btn:hover,
-        .gjs-four-color-h:hover {
-            color: #8a3d92;
-            border-color: #8a3d92;
-        }
-        .gjs-pn-btn.gjs-pn-active {
-            background-color: unset;
-            border: 1px solid #8a3d92;
-        }
-        .gjs-clm-tags,
-        .gjs-sm-sector,
-        .gjs-block-category,
-        .gjs-blocks-c {
-            width: unset;
-            padding: .25rem;
-            margin: .5rem;
-            border-radius: 5px;
-            background-color: #fff;
-        }
-        .gjs-category-title,
-        .gjs-layer-title,
-        .gjs-block-category .gjs-title,
-        .gjs-sm-sector-title {
-            background-color: unset;
-            border-bottom: 0;
-        }
-        .gjs-block {
-            box-shadow: 0;
-            background-color: unset;
-            background-color: #dfdfdf;
-        }
-        .gjs-title {
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: space-between;
-            font-weight: 700!important;
-        }
-        .gjs-clm-tags #gjs-clm-tag-label {
-            color: #fff;
-        }
-        .gjs-field-arrow-u {
-            border-bottom-color: #8a3d92;
-        }
-        .gjs-field .gjs-d-s-arrow,
-        .gjs-field-arrow-d {
-            border-top-color: #8a3d92;
-        }
-        .gjs-btn-prim {
-            background: #8a3d92!important;
-            color: #fff;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #8a3d92!important;
-        }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
 
-        .gjs-radio-item input:checked + .gjs-radio-item-label {
-            background: #8a3d92;
-            color: #f1f1f1;
-        }
+      .gjs-one-bg {
+        background-color: #dfdfdf;
+      }
+      .gjs-cv-canvas {
+        top: 5vh;
+        left: 16rem!important;
+        max-width: 1536px;
+      }
+      .gjs-pn-views-container {
+        left: 0;
+        right: unset;
+      }
+      .gjs-pn-panels {
+        /* box-shadow: 0 3px 4px 0 rgb(0 0 0 / 15%); */
+      }
+      .gjs-pn-panel {
+        z-index: 0;
+      }
+      .gjs-pn-devices-c,
+      .gjs-pn-options,
+      .gjs-pn-views,
+      .gjs-pn-commands {
+        z-index: 10;
+      }
+      .gjs-pn-views {
+        border: 0;
+      }
+      .gjs-two-color,
+      .gjs-four-color {
+        color: #8a3d92;
+        border-color: #8a3d92;
+      }
+      .gjs-title:hover,
+      .gjs-pn-btn:hover,
+      .gjs-four-color-h:hover {
+        color: #8a3d92;
+        border-color: #8a3d92;
+      }
+      .gjs-pn-btn.gjs-pn-active {
+        background-color: unset;
+        border: 1px solid #8a3d92;
+      }
+      .gjs-clm-tags,
+      .gjs-sm-sector,
+      .gjs-block-category,
+      .gjs-blocks-c {
+        width: unset;
+        padding: 0.25rem;
+        margin: 0.5rem;
+        border-radius: 5px;
+        background-color: #fff;
+      }
+      .gjs-category-title,
+      .gjs-layer-title,
+      .gjs-block-category .gjs-title,
+      .gjs-sm-sector-title {
+        background-color: unset;
+        border-bottom: 0;
+      }
+      .gjs-block {
+        box-shadow: 0;
+        background-color: unset;
+        background-color: #dfdfdf;
+      }
+      .gjs-title {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        font-weight: 700 !important;
+      }
+      .gjs-clm-tags #gjs-clm-tag-label {
+        color: #fff;
+      }
+      .gjs-field-arrow-u {
+        border-bottom-color: #8a3d92;
+      }
+      .gjs-field .gjs-d-s-arrow,
+      .gjs-field-arrow-d {
+        border-top-color: #8a3d92;
+      }
+      .gjs-btn-prim {
+        background: #8a3d92 !important;
+        color: #fff;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #8a3d92 !important;
+      }
+
+      .gjs-radio-item input:checked + .gjs-radio-item-label {
+        background: #8a3d92;
+        color: #f1f1f1;
+      }
+
+      .gjs-pn-views-container {
+        width: 15rem;
+      }
     </style>
   </head>
   <body>

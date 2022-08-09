@@ -16,7 +16,7 @@ export default (editor, option) => {
     type: 'radio',
     property: 'width',
     label: 'Width',
-    default: 'full',
+    default: '100%',
     // Additional props
     options: [
       { id: '25%', label: '1/4' },
@@ -41,7 +41,7 @@ export default (editor, option) => {
     type: 'radio',
     property: 'padding',
     label: 'Padding',
-    default: 'sm',
+    default: '0',
     // Additional props
     options: [
       { id: '0', label: 'None' },
@@ -55,9 +55,10 @@ export default (editor, option) => {
     type: 'radio',
     property: 'margin',
     label: 'margin placement',
-    default: 'left',
+    default: 'unset',
     // Additional props
     options: [
+      { id: 'unset', label: 'unset' },
       { id: '0 auto 0 0', label: 'left' },
       { id: '0 auto 0', label: 'center' },
       { id: '0 0 0 auto', label: 'right' },
@@ -68,7 +69,7 @@ export default (editor, option) => {
     type: 'radio',
     property: 'border-radius',
     label: 'Border Radius',
-    default: 'none',
+    default: '0',
     // Additional props
     options: [
       { value: '0', label: 'none' },
@@ -106,13 +107,29 @@ export default (editor, option) => {
     type: 'radio',
     property: 'font-size',
     label: 'Font Size',
-    default: 'normal',
+    default: '14px',
     // Additional props
     options: [
       { id: '14px', label: 'sm' },
       { id: '16px', label: 'normal' },
       { id: '18px', label: 'md' },
       { id: '24px', label: 'lg' },
+    ],
+  });
+
+
+  sm.addProperty('typographySector', {
+    type: 'radio',
+    property: 'text-align',
+    label: 'Text Align',
+    default: 'unset',
+    // Additional props
+    options: [
+      { id: 'unset', label: 'none' },
+      { id: 'left', label: 'left' },
+      { id: 'center', label: 'center' },
+      { id: 'right', label: 'right' },
+      { id: 'justify', label: 'justify' },
     ],
   });
 
